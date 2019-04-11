@@ -1,0 +1,26 @@
+import pygame, sys
+from pygame.locals import *
+pygame.init()
+pygame.display.set_caption("First Program")
+screen = pygame.display.set_mode((640,480))
+xpos = 320
+ypos = 240
+clock = pygame.time.Clock()
+while 1:
+    clock.tick(60)
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            sys.exit()
+    pressed_keys = pygame.key.get_pressed()
+
+    if pressed_keys[K_RIGHT]:
+        xpos += 10
+    if pressed_keys[K_UP]:
+        ypos -= 10
+    if pressed_keys[K_LEFT]:
+        xpos -= 10
+    if pressed_keys[K_DOWN]:
+        ypos += 10
+    screen.fill((178,204,255))
+    pygame.draw.circle(screen,(255,255,255),(xpos,ypos),30,2)
+    pygame.display.update()
