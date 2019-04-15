@@ -1,0 +1,50 @@
+package Day4;
+
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+public class GridFont extends JFrame{
+	public static void main(String[] args) {
+		new GridFont();
+	}
+	JLabel jl1;
+	JLabel jl2;
+	JLabel jl3;
+	JLabel jl4;
+	JLabel jl5;
+	JPanel mp;
+	public GridFont() {
+		setSize(450,300);
+		setTitle("FontTest");
+		setDefaultCloseOperation(2);
+		setLocationRelativeTo(null);
+		add(mp = new JPanel(new GridLayout(5,1,0,5)));
+		mp.setBorder(new EmptyBorder(10,10,10,10));
+		String[] ln = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ "};
+		mp.add(jl1= new JLabel(ln[0]));
+		mp.add(jl2= new JLabel(ln[0]));
+		mp.add(jl3= new JLabel(ln[0]));
+		mp.add(jl4= new JLabel(ln[0]));
+		mp.add(jl5= new JLabel(ln[0]));
+		Font fn1 = new Font("ºù±×·¹Ã¼",Font.PLAIN,20);
+		Font fn2 = new Font("ºù±×·¹Ã¼",Font.ITALIC,20);
+		Font fn3 = new Font("ºù±×·¹Ã¼",Font.BOLD,20);
+		Font fn4 = new Font("ºù±×·¹Ã¼",Font.BOLD+Font.ITALIC,20);
+		jl1.setLayout(new FlowLayout());
+		jl2.setLayout(new FlowLayout());
+		jl3.setLayout(new FlowLayout());
+		jl4.setLayout(new FlowLayout());
+		jl5.setLayout(new FlowLayout());
+		jl1.setFont(fn1);
+		jl2.setFont(fn2);
+		jl3.setFont(fn3);
+		jl4.setFont(fn4);
+		setVisible(true);
+	}
+}
