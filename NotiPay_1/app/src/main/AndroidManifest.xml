@@ -13,14 +13,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ShoppingList"></activity>
-        <activity android:name=".BarScan" />
-        <activity android:name=".Menu4Fragment" />
-        <activity android:name=".Menu3Fragment" />
-        <activity android:name=".Menu2Fragment" />
-        <activity android:name=".Menu1Fragment" />
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="stateHidden">
+        <activity android:name=".mart_AccountActivity"/>
+        <activity android:name=".mart_Accountfix"/>
+        <activity
+            android:name=".mart_ShoppingList"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".mart_MyItem" />
+        <activity android:name=".mart_MyItemView" />
+        <activity android:name=".mart_Server_chat" />
+        <activity android:name=".mart_MainActivity" />
+        <activity android:name=".mart_StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
